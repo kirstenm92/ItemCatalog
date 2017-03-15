@@ -1,0 +1,23 @@
+body            { font-family: 'Baloo Bhaina', cursive; background-color: #ffa096; text-align: center; background-image: url("file://C:/home/kirsten/Pictures/Wallpapers/catalogwall.jpg")}
+ h1, h2, h3, h4       { color: #000000; }
+h1, h2          { font-family: 'Baloo Bhaina', cursive; margin: 0; }
+h1              { border-bottom: 2px solid #eee; }
+h2              { font-size: 1.5em; }
+
+p               { color: #4f130d; }
+
+a {text-decoration: none; color:#c17659; font-size: 1.1em;}
+
+.pane {position:absolute; left: 25%; border: 2px solid;
+    border-radius: 25px; padding: 5px; margin: 5px; border-color: #999999; background-color: #333333; }
+.header         {left:50%; text-align: center;}
+.name {width:50%;display: inline-block; float: left;}
+.description {}
+.price {text-align: right; width:50%; float: right; }
+.editdeletepane{}
+
+.flash          { background: #cee5F5; }
+
+div {padding: 20px 20px 20px 20px;}
+
+/*url('https://cloud.githubusercontent.com/assets/9041401/6119508/7cbced14-b07e-11e4-9dbd-f01488203879.jpg')*/

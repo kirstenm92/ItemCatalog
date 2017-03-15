@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+{% include "header.html" %}
+
+<!-- THIS PAGE SHOWS RESTAURANTS FOR A LOGGED IN USER -->
+
+		<h1>List of Restaurants</h1>
+
+		<h1>{{restaurants.name}}</h1>
+
+		<a href="{{url_for('newRestaurant')}}">Create New Restaurant</a>
+	
+
+			{% with messages = get_flashed_messages() %}
+		{% if messages %}
+
+			<ul>
+			{% for message in messages %}	
+				<li><strong>{{ message }}</strong></li>
+			{% endfor %}
+			</ul>
+			{% endif %}
+		{% endwith %}
+
+		
+
+		<!-- indentation doesn't work in HTML, so must use these -->
+		{% for r in restaurants %}
+
+		<div>
+			<h2>{{r.name}}</h2>
+			<a href="{{url_for('showMenu', restaurant_id = r.id) }}">Go to Restaurant Menu</a>
+			<br><br><br><br>
+			<a href="{{url_for('editRestaurant', restaurant_id = r.id) }}">Edit Restaurant</a>
+			<br>
+			<a href="{{url_for('deleteRestaurant', restaurant_id = r.id) }}">Delete Restaurant</a>
+			
+			
+			<br>
+			<br><br>
+
+		</div>
+
+		{% endfor %}
+
+{% endblock %}

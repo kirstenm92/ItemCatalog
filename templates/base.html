@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Restaurants Galore!</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">	
+	<link href="https://fonts.googleapis.com/css?family=Gidugu" rel="stylesheet">
+</head>
+<body>
+
+<!-- Created by me - maybe delete if calling in header.html -->
+<!-- <div id="appheader">
+	<a href="/restaurants">Home  </a>
+	<a href="/login">Login  </a>
+</div> -->
+
+
+<div id="content">
+
+	{% block content %}
+
+	{% endblock %}
+
+</div>
+
+</body>
+</html>
