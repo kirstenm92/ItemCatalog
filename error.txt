@@ -1,0 +1,19 @@
+I am getting an error that seems to be related to the newly added
+login_required decorator. 
+
+My virtual machine is up and running but will not load my finalproject.py file because of this error - see below.
+
+
+vagrant@vagrant-ubuntu-trusty-32:/vagrant/3.Authorisation$ python finalproject.py
+Traceback (most recent call last):
+  File "finalproject.py", line 403, in <module>
+    @login_required
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1013, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 62, in wrapper_func
+    return f(self, *args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 942, in add_url_rule
+    endpoint = _endpoint_from_view_func(view_func)
+  File "/usr/lib/python2.7/dist-packages/flask/helpers.py", line 60, in _endpoint_from_view_func
+    assert view_func is not None, 'expected view func if endpoint ' \
+AssertionError: expected view func if endpoint is not provided.
